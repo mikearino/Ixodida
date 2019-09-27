@@ -65,6 +65,7 @@ export class MapContainer extends React.Component {
         zoom={10}
         style={mapStyles}
         initialCenter={{ lat: 45.520, lng: -122.01}}
+        zoomControl={true}
         >
         {this.displayMarkers()}
         <Marker
