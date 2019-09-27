@@ -2,6 +2,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Project Description:
 
+1. Set a default center and zoom for the google map
+
+2. Hardcode marker props (passed into whatever component is rendering the google map) amd display those markers
+https://stackoverflow.com/questions/43859785/how-do-i-display-multiple-markers-with-react-google-maps
+
+3. Allow users to add a marker by typing in a latitude and longitude into input boxes
+
+Nice to haves:
+1. Set up firebase
+2. Click map to add markers
+3. Delete and edit marker functionality 
+4. Include redux
+
 
 
 ![routes](/src/Routes.png)
