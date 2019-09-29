@@ -8,7 +8,6 @@ import { Navbar, Nav, Form, FormControl, Button} from 'react-bootstrap'
         <Nav className="mr-auto">
           <Nav.Link href="#/">Home</Nav.Link>
           <Nav.Link href="#/tickmap">Tick Locations</Nav.Link>
-          <Nav.Link href="#/newtick">Add A location</Nav.Link>
         </Nav>
        
       </Navbar>

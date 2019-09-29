@@ -18,7 +18,7 @@ const App = () => {
         <Route path='/newtick' component={NewTick} />
         <Route path='/tickmap' component={TickMap} />
       </Switch>
-      <Footer/>
+      
     </div>
   );
 }

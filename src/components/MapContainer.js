@@ -1,16 +1,23 @@
 import React from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
-
+import firebase from './Firebase.js';
 
 const mapStyles = {
   width: '100%',
   height: '100%'
 };
 
+const formStyles = {
+  position: 'absolute',
+  bottom: '10px'
+};
+
 export class MapContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      lats: '',
+      longs: '',
       showingInfoWindow: false,
       activeMarker: {},
       selectedPlace: {},
@@ -56,10 +63,37 @@ export class MapContainer extends React.Component {
         onClick = {() => console.log("You clikced me!")} />
       })
     }
-  
+    
+    handleChange = (e) => {
+      this.setState({
+        [e.target.name]: e.target.value
+      })
+    }
+
+    handleSubmit= (e) => {
+      e.preventDefault();
+      const pinsRef = firebase.database().ref('pins');
+      const pin = {
+        latsValue: this.state.lats,
+        longsValue: this.state.longs
+      }
+      pinsRef.push(pin);
+      this.setState({
+        lats: '',
+        longs: ''
+      });
+    }
   
   render() {
     return (
+      <div>
+      <section styles= {formStyles} className="add-pin">
+      <form onSubmit={this.handleSubmit}>
+        <input type="text" name="lats" placeholder="Enter lats" onChange={this.handleChange} value={this.state.lats} />
+        <input type="text" name="longs" placeholder="Enter longs" onChange={this.handleChange} value={this.state.longs} />
+        <button>Add Pin</button>
+      </form>
+      </section>
       <Map
         google={this.props.google}
         zoom={10}
@@ -82,6 +116,7 @@ export class MapContainer extends React.Component {
         </div>
         </InfoWindow>
       </Map>
+    </div>
     );
   }
 }
