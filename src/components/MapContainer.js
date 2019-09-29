@@ -21,7 +21,7 @@ export class MapContainer extends React.Component {
       showingInfoWindow: false,
       activeMarker: {},
       selectedPlace: {},
-      stores:[
+      markers:[
         {latitutde:45.633, longitude:-120.909},
         {latitutde:45.700, longitude:-121.403},
         {latitutde:45.546, longitude:-122.373},
@@ -32,17 +32,16 @@ export class MapContainer extends React.Component {
       ]
     }
   }
-      
+      //shows info window by passing in marker and place changing info window state to true  
       onMarkerClick = (props, marker, e) =>
-      //shows info window by passing in marker and place changing info window state to true
       this.setState({
         selectedPlace: props,
         activeMarker: marker,
         showingInfoWindow: true
       });
 
+      // if the infowindow state is equal to true on close this changes it to false and marker is inactive
       onClose = props => {
-        // if the infowindow state is equal to true on close this changes it to false and marker is inactive
         if (this.state.showingInfoWindow) {
           this.setState({
             showingInfoWindow: false, 
@@ -53,14 +52,19 @@ export class MapContainer extends React.Component {
 
       displayMarkers = () => {
       //map through array looks at each index
-      return this.state.stores.map((store, index) => {
+      return this.state.markers.map((marker, index) => {
         //return each position from that ref point
-        return <Marker key={index} id={index} position={{
-          lat: store.latitutde,
-          lng: store.longitude
-        }}
+        return <Marker 
+          key={index} 
+          id={index} 
+          position={{
+            lat: marker.latitutde,
+            lng: marker.longitude
+          }}
         //add some functionality to prop being passed in
-        onClick = {() => console.log("You clikced me!")} />
+          onClick={this.onMarkerClick} 
+          name={"Some info needs to go here"}
+        />
       })
     }
     
@@ -88,32 +92,26 @@ export class MapContainer extends React.Component {
     return (
       <div>
       <section styles= {formStyles} className="add-pin">
-      <form onSubmit={this.handleSubmit}>
-        <input type="text" name="lats" placeholder="Enter lats" onChange={this.handleChange} value={this.state.lats} />
-        <input type="text" name="longs" placeholder="Enter longs" onChange={this.handleChange} value={this.state.longs} />
-        <button>Add Pin</button>
-      </form>
+        <form onSubmit={this.handleSubmit}>
+          <input type="text" name="lats" placeholder="Enter lats" onChange={this.handleChange} value={this.state.lats} />
+          <input type="text" name="longs" placeholder="Enter longs" onChange={this.handleChange} value={this.state.longs} />
+          <button>Add Pin</button>
+        </form>
       </section>
       <Map
         google={this.props.google}
         zoom={10}
         style={mapStyles}
         initialCenter={{ lat: 45.520, lng: -122.01}}
-        zoomControl={true}
-        >
+        zoomControl={true}>
         {this.displayMarkers()}
-        <Marker
-        onClick={this.onMarkerClick}
-        name={'Some place need to add dynamic stuff here'}
-        />
         <InfoWindow
-        marker={this.state.activeMarker}
-        visible={this.state.showingInfoWindow}
-        onClose={this.onClose}
-        >
-        <div>
-          <h4>{this.state.selectedPlace.name}</h4>
-        </div>
+          marker={this.state.activeMarker}
+          visible={this.state.showingInfoWindow}
+          onClose={this.onClose}>
+          <div>
+            <h4>{this.state.selectedPlace.name}</h4>
+          </div>
         </InfoWindow>
       </Map>
     </div>
