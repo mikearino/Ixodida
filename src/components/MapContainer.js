@@ -18,20 +18,52 @@ export class MapContainer extends React.Component {
     this.state = {
       lats: '',
       longs: '',
+      spots: [],
       showingInfoWindow: false,
       activeMarker: {},
       selectedPlace: {},
       markers:[
-        {latitutde:45.633, longitude:-120.909},
-        {latitutde:45.700, longitude:-121.403},
-        {latitutde:45.546, longitude:-122.373},
-        {latitutde:45.703, longitude:-121.505},
-        {latitutde:45.710, longitude:-121.362},
-        {latitutde:45.682, longitude:-121.300},
-        {latitutde:45.595, longitude:-121.870},
+        {latitude:45.633, longitude:-120.909},
+        {latitude:45.700, longitude:-121.403},
+        {latitude:45.546, longitude:-122.373},
+        {latitude:45.703, longitude:-121.505},
+        {latitude:45.710, longitude:-121.362},
+        {latitude:45.682, longitude:-121.300},
+        {latitude:45.595, longitude:-121.870},
       ]
     }
   }
+  //so can i just change markers in state to pins or am i missing something here becuase im getting a little confused
+   componentDidMount = () => {
+     //grabs reference point in firebase db
+     const pinsRef = firebase.database().ref('pins');
+     //looks for initial data and whenever data is changed
+     pinsRef.on('value', (snapshot) => {
+    //variable holding snapshots value
+      let markersFromDB = snapshot.val();
+      // {-Lpp1zN2ifK9250eTE20: {latsValue: "33", longsValue: "44"}}
+    //new array
+      let newMarkerState = [];
+      
+      //iterates through pins from the DB and pushes data in to new array
+      for (let markerID in markersFromDB) {
+        // {"1234": {lat: 123, long: 678}, "345": {lat: 234, long: 45}...}
+        const latLongValue = markersFromDB[markerID]
+        const lats = latLongValue.latsValue
+        const longs = latLongValue.longsValue
+        newMarkerState.push({
+          id: markerID,
+          latitude: lats,
+          longitude: longs
+        });
+      }
+    // sets new state to the pushed array
+      this.setState({
+        markers: newMarkerState
+      });
+     });
+   }
+
       //shows info window by passing in marker and place changing info window state to true  
       onMarkerClick = (props, marker, e) =>
       this.setState({
@@ -58,7 +90,7 @@ export class MapContainer extends React.Component {
           key={index} 
           id={index} 
           position={{
-            lat: marker.latitutde,
+            lat: marker.latitude,
             lng: marker.longitude
           }}
         //add some functionality to prop being passed in
