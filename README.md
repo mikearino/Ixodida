@@ -2,19 +2,33 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Project Description:
 
-1. Set a default center and zoom for the google map
+1. CHECK Set a default center and zoom for the google map 
 
-2. Hardcode marker props (passed into whatever component is rendering the google map) amd display those markers
+2. CHECK Hardcode marker props (passed into whatever component is rendering the google map) amd display those markers 
 https://stackoverflow.com/questions/43859785/how-do-i-display-multiple-markers-with-react-google-maps
 
-3. Allow users to add a marker by typing in a latitude and longitude into input boxes
+3. CHECK Allow users to add a marker by typing in a latitude and longitude into input boxes(need to figure this out: https://stackoverflow.com/questions/55263520/google-maps-react-adding-markers-with-lat-lng) 
 
-Nice to haves:
-1. Set up firebase
-2. Click map to add markers
-3. Delete and edit marker functionality 
-4. Include redux
+Must haves:
+1. Home page info
+2. Make map size smaller on page and add a little info box
 
+Styling:
+1. Night mode on map
+2. Dark theme everything 
+3. Icon for navbar
+4. Icons for map markers
+
+Technical:
+1. Include redux
+2. Handle fast adding of
+
+User stories:
+1. As a user, I want to be able to add a tick location (lat and long) by clicking the map
+2. As a user, I want to be able to add a more information when I create a tick location
+3. As a user, I want to be able to see more information in a popup when I click on a marker
+4. As a user, I want to be able to edit a tick location
+5. As a user, I want to see photos of the area or ticks when I click on a marker (in a popup)
 
 
 ![routes](/src/Routes.png)
