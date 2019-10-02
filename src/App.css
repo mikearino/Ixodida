@@ -1,3 +1,7 @@
+body {
+  background: linear-gradient(#e66465, #9198e5);
+}
+
 .App {
   text-align: center;
 }
@@ -21,3 +25,38 @@
   color: #09d3ac;
 }
 
+.Cloud1 {
+  padding-top: 200px;
+  float: right;
+  max-width: 80%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.Cloud2 {
+  padding-top: 500px;
+  float: left;
+  max-width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.Cloud3 {
+  /* float: right; */
+  max-width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.Cloud4 {
+  /* float: left; */
+  padding-top: 500px;
+  max-width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+  z-index: -5;
+}
+
+h1 {
+  color: blue;
+}

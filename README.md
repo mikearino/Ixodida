@@ -19,6 +19,11 @@ Styling:
 3. Icon for navbar
 4. Icons for map markers
 
+Parallax:
+images:
+BG blue sky/ clouds/ FG grass/ ticks/ tree
+1.Scrolling down tick comes out of grass
+
 Technical:
 1. Include redux
 2. Handle fast adding of
@@ -29,7 +34,7 @@ User stories:
 3. As a user, I want to be able to see more information in a popup when I click on a marker
 4. As a user, I want to be able to edit a tick location
 5. As a user, I want to see photos of the area or ticks when I click on a marker (in a popup)
-
+6. As a user, I want the location of the map to generate where I currently am.
 
 ![routes](/src/Routes.png)
 

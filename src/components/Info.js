@@ -1,105 +1,45 @@
-import React from 'react';
-import { Card, CardColumns } from 'react-bootstrap'
+import React from "react";
+import { Card, CardColumns } from "react-bootstrap";
+import Rellax from "rellax";
+import Parallax from "react-rellax";
+import Cloud1 from "./img/cloud1.png";
+import Cloud2 from "./img/cloud2.png";
+import Cloud3 from "./img/cloud3.jpg";
+import Cloud4 from "./img/cloud4.jpg";
+import Tree from "./img/tree.png";
+import Grass from "./img/grass.png";
+import Tick from "./img/tick.png";
+
+import "../App.css";
 
 const Info = () => {
   return (
     <div>
-      <h3>This is the info component</h3>
+      <section>
+        <Parallax speed={30}>
+          <img src={Cloud1} className="Cloud1" />
+        </Parallax>
+        <Parallax speed={25}>
+          <img src={Cloud4} className="Cloud4" />
+        </Parallax>
+        <Parallax speed={9}>
+          <img src={Cloud3} className="Cloud3" />
+        </Parallax>
+        <Parallax speed={25}>
+          <img src={Cloud2} className="Cloud2" />
+        </Parallax>
+        <Parallax speed={24.5}>
+          <img src={Tree} className="Tree" />
+        </Parallax>
+        <Parallax speed={27}>
+          <img src={Grass} className="Grass" />
+          <Parallax speed={4}>
+            <img src={Tick} className="Tick" />
+          </Parallax>
+        </Parallax>
+      </section>
     </div>
-  )
-    // <CardColumns>
-    //   <Card>
-    //     <Card.Img variant="top" src="holder.js/100px160" />
-    //     <Card.Body>
-    //       <Card.Title>Card title that wraps to a new line</Card.Title>
-    //       <Card.Text>
-    //         This is a longer card with supporting text below as a natural lead-in to
-    //         additional content. This content is a little bit longer.
-    //   </Card.Text>
-    //     </Card.Body>
-    //   </Card>
-    //   <Card className="p-3">
-    //     <blockquote className="blockquote mb-0 card-body">
-    //       <p>
-    //         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
-    //         erat a ante.
-    //   </p>
-    //       <footer className="blockquote-footer">
-    //         <small className="text-muted">
-    //           Someone famous in <cite title="Source Title">Source Title</cite>
-    //         </small>
-    //       </footer>
-    //     </blockquote>
-    //   </Card>
-    //   <Card>
-    //     <Card.Img variant="top" src="holder.js/100px160" />
-    //     <Card.Body>
-    //       <Card.Title>Card title</Card.Title>
-    //       <Card.Text>
-    //         This card has supporting text below as a natural lead-in to additional
-    //     content.{' '}
-    //       </Card.Text>
-    //     </Card.Body>
-    //     <Card.Footer>
-    //       <small className="text-muted">Last updated 3 mins ago</small>
-    //     </Card.Footer>
-    //   </Card>
-    //   <Card bg="primary" text="white" className="text-center p-3">
-    //     <blockquote className="blockquote mb-0 card-body">
-    //       <p>
-    //         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
-    //         erat a ante.
-    //   </p>
-    //       <footer className="blockquote-footer">
-    //         <small className="text-muted">
-    //           Someone famous in <cite title="Source Title">Source Title</cite>
-    //         </small>
-    //       </footer>
-    //     </blockquote>
-    //   </Card>
-    //   <Card className="text-center">
-    //     <Card.Body>
-    //       <Card.Title>Card title</Card.Title>
-    //       <Card.Text>
-    //         This card has supporting text below as a natural lead-in to additional
-    //     content.{' '}
-    //       </Card.Text>
-    //       <Card.Text>
-    //         <small className="text-muted">Last updated 3 mins ago</small>
-    //       </Card.Text>
-    //     </Card.Body>
-    //   </Card>
-    //   <Card>
-    //     <Card.Img src="holder.js/100px160" />
-    //   </Card>
-    //   <Card className="text-right">
-    //     <blockquote className="blockquote mb-0 card-body">
-    //       <p>
-    //         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
-    //         erat a ante.
-    //   </p>
-    //       <footer className="blockquote-footer">
-    //         <small className="text-muted">
-    //           Someone famous in <cite title="Source Title">Source Title</cite>
-    //         </small>
-    //       </footer>
-    //     </blockquote>
-    //   </Card>
-    //   <Card>
-    //     <Card.Body>
-    //       <Card.Title>Card title</Card.Title>
-    //       <Card.Text>
-    //         This is a wider card with supporting text below as a natural lead-in to
-    //         additional content. This card has even longer content than the first to
-    //         show that equal height action.
-    //   </Card.Text>
-    //       <Card.Text>
-    //         <small className="text-muted">Last updated 3 mins ago</small>
-    //       </Card.Text>
-    //     </Card.Body>
-    //   </Card>
-    // </CardColumns>
-  // );
-}
+  );
+};
 
 export default Info;
