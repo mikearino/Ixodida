@@ -25,6 +25,18 @@ body {
   color: #09d3ac;
 }
 
+.NavIcon {
+  padding: 10px;
+}
+
+.NavStyle {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  font-size: 40px;
+}
+
 .Cloud1 {
   padding-top: 200px;
   float: right;
@@ -82,6 +94,9 @@ body {
   float: right;
 }
 
-h1 {
-  color: blue;
+.FormMove {
+  font-size: 30;
+  position: absolute;
+  top: 90%;
+  z-index: 2;
 }

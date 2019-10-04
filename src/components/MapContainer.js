@@ -1,15 +1,18 @@
 import React from "react";
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
 import firebase from "./Firebase.js";
+import { isAbsolute } from "path";
 
 const mapStyles = {
+  position: "absolute",
+  top: "50px",
   width: "100%",
   height: "80%"
 };
 
 const formStyles = {
-  position: "absolute",
-  bottom: "10px"
+  position: "relative",
+  top: "80px"
 };
 
 export class MapContainer extends React.Component {
@@ -71,12 +74,12 @@ export class MapContainer extends React.Component {
 
   //shows info window by passing in marker and place changing info window state to true
   onMarkerClick = (props, marker, e) => {
-    console.log(this.state.longitude);
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
       showingInfoWindow: true
     });
+    console.log(this.state.markers);
   };
   // if the infowindow state is equal to true on close this changes it to false and marker is inactive
   onClose = props => {
@@ -102,7 +105,7 @@ export class MapContainer extends React.Component {
           }}
           //add some functionality to prop being passed in
           onClick={this.onMarkerClick}
-          name={console.log(this.id)}
+          name={this.state.markers.key}
         />
       );
     });
@@ -150,7 +153,7 @@ export class MapContainer extends React.Component {
     return (
       <div>
         <section styles={formStyles} className="add-pin">
-          <form onSubmit={this.handleSubmit}>
+          <form className="FormMove" onSubmit={this.handleSubmit}>
             <input
               type="text"
               name="name"
