@@ -142,6 +142,28 @@ export class MapContainer extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <input
               type="text"
+              name="placeName"
+              placeholder="Name of Location"
+              onChange={this.handleChange}
+              value={this.state.lats}
+            />
+            <input
+              type="text"
+              name="areaInfo"
+              placeholder="Information on tick location"
+              onChange={this.handleChange}
+              value={this.state.lats}
+            />
+            {/* TimeStamp? */}
+            <input
+              type="text"
+              name="lats"
+              placeholder="Enter lats"
+              onChange={this.handleChange}
+              value={this.state.lats}
+            />
+            <input
+              type="text"
               name="lats"
               placeholder="Enter lats"
               onChange={this.handleChange}
