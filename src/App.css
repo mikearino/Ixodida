@@ -57,6 +57,31 @@ body {
   z-index: -5;
 }
 
+.Tick {
+  /* padding-top: 1000px; */
+  z-index: -1;
+}
+
+.Tick1 {
+  padding-left: 500px;
+}
+
+.Tick2 {
+  float: right;
+}
+
+.Tick3 {
+  float: right;
+}
+
+.Tick4 {
+  float: right;
+}
+
+.Tick5 {
+  float: right;
+}
+
 h1 {
   color: blue;
 }

@@ -4,7 +4,7 @@ import firebase from "./Firebase.js";
 
 const mapStyles = {
   width: "100%",
-  height: "60%"
+  height: "80%"
 };
 
 const formStyles = {

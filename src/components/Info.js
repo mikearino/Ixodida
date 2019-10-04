@@ -31,12 +31,27 @@ const Info = () => {
         <Parallax speed={24.5}>
           <img src={Tree} className="Tree" />
         </Parallax>
-        <Parallax speed={27}>
+        <Parallax speed={26.5}>
           <img src={Grass} className="Grass" />
-          <Parallax speed={4}>
-            <img src={Tick} className="Tick" />
-          </Parallax>
         </Parallax>
+      </section>
+
+      <section>
+        <Parallax speed={4}>
+          <img src={Tick} className="Tick1" />
+        </Parallax>
+        {/* <Parallax speed={3}>
+          <img src={Tick} className="Tick2" />
+        </Parallax>
+        <Parallax speed={1}>
+          <img src={Tick} className="Tick3" />
+        </Parallax>
+        <Parallax speed={2}>
+          <img src={Tick} className="Tick4" />
+        </Parallax>
+        <Parallax speed={4}>
+          <img src={Tick} className="Tick5" />
+        </Parallax> */}
       </section>
     </div>
   );
