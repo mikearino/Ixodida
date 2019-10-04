@@ -18,6 +18,8 @@ export class MapContainer extends React.Component {
     this.state = {
       lats: "",
       longs: "",
+      name: "",
+      info: "",
       showingInfoWindow: false,
       activeMarker: {},
       selectedPlace: {},
@@ -47,13 +49,17 @@ export class MapContainer extends React.Component {
       //iterates through pins from the DB and pushes data in to new array
       for (let markerID in markersFromDB) {
         // {"1234": {lat: 123, long: 678}, "345": {lat: 234, long: 45}...}
-        const latLongValue = markersFromDB[markerID];
-        const lats = latLongValue.latsValue;
-        const longs = latLongValue.longsValue;
+        const markerValue = markersFromDB[markerID];
+        const lats = markerValue.latsValue;
+        const longs = markerValue.longsValue;
+        const info = markerValue.infoValue;
+        const name = markerValue.nameValue;
         newMarkerState.push({
           id: markerID,
           latitude: lats,
-          longitude: longs
+          longitude: longs,
+          placeName: name,
+          placeInfo: info
         });
       }
       // sets new state to the pushed array
@@ -64,13 +70,14 @@ export class MapContainer extends React.Component {
   };
 
   //shows info window by passing in marker and place changing info window state to true
-  onMarkerClick = (props, marker, e) =>
+  onMarkerClick = (props, marker, e) => {
+    console.log(this.state.longitude);
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
       showingInfoWindow: true
     });
-
+  };
   // if the infowindow state is equal to true on close this changes it to false and marker is inactive
   onClose = props => {
     if (this.state.showingInfoWindow) {
@@ -95,7 +102,7 @@ export class MapContainer extends React.Component {
           }}
           //add some functionality to prop being passed in
           onClick={this.onMarkerClick}
-          name={"Some info needs to go here"}
+          name={console.log(this.id)}
         />
       );
     });
@@ -112,12 +119,16 @@ export class MapContainer extends React.Component {
     const pinsRef = firebase.database().ref("pins");
     const pin = {
       latsValue: this.state.lats,
-      longsValue: this.state.longs
+      longsValue: this.state.longs,
+      infoValue: this.state.info,
+      nameValue: this.state.name
     };
     pinsRef.push(pin);
     this.setState({
       lats: "",
-      longs: ""
+      longs: "",
+      info: "",
+      name: ""
     });
   };
 
@@ -142,25 +153,17 @@ export class MapContainer extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <input
               type="text"
-              name="placeName"
+              name="name"
               placeholder="Name of Location"
               onChange={this.handleChange}
-              value={this.state.lats}
+              value={this.state.name}
             />
             <input
               type="text"
-              name="areaInfo"
+              name="info"
               placeholder="Information on tick location"
               onChange={this.handleChange}
-              value={this.state.lats}
-            />
-            {/* TimeStamp? */}
-            <input
-              type="text"
-              name="lats"
-              placeholder="Enter lats"
-              onChange={this.handleChange}
-              value={this.state.lats}
+              value={this.state.info}
             />
             <input
               type="text"
