@@ -9,6 +9,11 @@ Project Description:
 
 3. CHECK Allow users to add a marker by typing in a latitude and longitude into input boxes(need to figure this out: https://stackoverflow.com/questions/55263520/google-maps-react-adding-markers-with-lat-lng)
 
+Next up:
+
+1. Show location info on popup
+2. Make form require input for every box
+
 Must haves:
 
 1. Home page info
@@ -34,7 +39,7 @@ Technical:
 User stories:
 
 1. As a user, I want to be able to add a tick location (lat and long) by clicking the map
-2. As a user, I want to be able to add a more information when I create a tick location
+2. As a user, I want to be able to add more information when I create a tick location
 3. As a user, I want to be able to see more information in a popup when I click on a marker
 4. As a user, I want to be able to edit a tick location
 5. As a user, I want to see photos of the area or ticks when I click on a marker (in a popup)

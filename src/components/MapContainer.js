@@ -26,15 +26,7 @@ export class MapContainer extends React.Component {
       showingInfoWindow: false,
       activeMarker: {},
       selectedPlace: {},
-      markers: [
-        { latitude: 45.633, longitude: -120.909 },
-        { latitude: 45.7, longitude: -121.403 },
-        { latitude: 45.546, longitude: -122.373 },
-        { latitude: 45.703, longitude: -121.505 },
-        { latitude: 45.71, longitude: -121.362 },
-        { latitude: 45.682, longitude: -121.3 },
-        { latitude: 45.595, longitude: -121.87 }
-      ]
+      markers: []
     };
   }
 
@@ -74,6 +66,7 @@ export class MapContainer extends React.Component {
 
   //shows info window by passing in marker and place changing info window state to true
   onMarkerClick = (props, marker, e) => {
+    console.log({ props });
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
@@ -95,6 +88,9 @@ export class MapContainer extends React.Component {
     //map through array looks at each index
     return this.state.markers.map((marker, index) => {
       //return each position from that ref point
+      console.log(
+        `Location: ${marker.placeName} Description: ${marker.placeInfo}`
+      );
       return (
         <Marker
           key={index}
@@ -105,7 +101,10 @@ export class MapContainer extends React.Component {
           }}
           //add some functionality to prop being passed in
           onClick={this.onMarkerClick}
-          name={this.state.markers.key}
+          name={`Location: ${marker.placeName}`}
+          info={`Description: ${marker.placeInfo}`}
+          lat={`Latitude: ${marker.latitude}`}
+          long={`Longitude: ${marker.longitude}`}
         />
       );
     });
@@ -201,7 +200,11 @@ export class MapContainer extends React.Component {
             onClose={this.onClose}
           >
             <div>
-              <h4>{this.state.selectedPlace.name}</h4>
+              <h6>{this.state.selectedPlace.name}</h6>
+              <h6>{this.state.selectedPlace.info}</h6>
+              <h6>
+                {this.state.selectedPlace.lat}, {this.state.selectedPlace.long}
+              </h6>
             </div>
           </InfoWindow>
         </Map>
