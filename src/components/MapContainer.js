@@ -101,7 +101,7 @@ export class MapContainer extends React.Component {
           }}
           //add some functionality to prop being passed in
           onClick={this.onMarkerClick}
-          name={`Location: ${marker.placeName}`}
+          name={marker.placeName}
           info={`Description: ${marker.placeInfo}`}
           lat={`Latitude: ${marker.latitude}`}
           long={`Longitude: ${marker.longitude}`}
@@ -159,6 +159,7 @@ export class MapContainer extends React.Component {
               placeholder="Name of Location"
               onChange={this.handleChange}
               value={this.state.name}
+              required
             />
             <input
               type="text"
@@ -166,6 +167,7 @@ export class MapContainer extends React.Component {
               placeholder="Information on tick location"
               onChange={this.handleChange}
               value={this.state.info}
+              required
             />
             <input
               type="text"
@@ -173,6 +175,7 @@ export class MapContainer extends React.Component {
               placeholder="Enter lats"
               onChange={this.handleChange}
               value={this.state.lats}
+              required
             />
             <input
               type="text"
@@ -180,6 +183,7 @@ export class MapContainer extends React.Component {
               placeholder="Enter longs"
               onChange={this.handleChange}
               value={this.state.longs}
+              required
             />
             <button>Add Pin</button>
           </form>
@@ -198,9 +202,10 @@ export class MapContainer extends React.Component {
             marker={this.state.activeMarker}
             visible={this.state.showingInfoWindow}
             onClose={this.onClose}
+            maxWidth={300}
           >
             <div>
-              <h6>{this.state.selectedPlace.name}</h6>
+              <h4>{this.state.selectedPlace.name}</h4>
               <h6>{this.state.selectedPlace.info}</h6>
               <h6>
                 {this.state.selectedPlace.lat}, {this.state.selectedPlace.long}
