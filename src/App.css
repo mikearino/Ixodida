@@ -1,5 +1,6 @@
-body {
+#infoComponent {
   background: linear-gradient(#e66465, #9198e5);
+  height: 100%;
 }
 
 .App {
@@ -94,9 +95,14 @@ body {
   float: right;
 }
 
+.TickMap {
+  background-color: black !important;
+}
+
 .FormMove {
   font-size: 30;
   position: absolute;
-  top: 90%;
+  top: 110%;
+  padding-left: 25%;
   z-index: 2;
 }

@@ -11,8 +11,12 @@ Project Description:
 
 Next up:
 
-1. Show location info on popup
-2. Make form require input for every box
+1. Show location info on popup CHECK
+2. Make form require input for every box CHECK
+3. Fix background
+4. Create a dynamic list of locations.
+5. Create a delete button that lives on each li.
+6. Delete a marker from the database.
 
 Must haves:
 

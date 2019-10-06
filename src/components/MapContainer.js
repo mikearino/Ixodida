@@ -1,12 +1,14 @@
 import React from "react";
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
 import firebase from "./Firebase.js";
+import { Button } from "react-bootstrap";
 import { isAbsolute } from "path";
 
 const mapStyles = {
   position: "absolute",
-  top: "50px",
-  width: "100%",
+  top: "4%",
+  marginLeft: "3%",
+  marginRight: "3%",
   height: "80%"
 };
 
@@ -134,20 +136,6 @@ export class MapContainer extends React.Component {
     });
   };
 
-  handleClick = e => {
-    console.log(e);
-    if (e.shiftKey) {
-      console.log("mouseDownWithControl");
-    } else {
-      console.log("normalMouseDown");
-    }
-  };
-
-  handleRightClick = e => {
-    console.log("rightclick");
-  };
-
-  //add onclick to map component and going to creat new onmapclick function
   render() {
     return (
       <div>

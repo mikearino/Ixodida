@@ -14,7 +14,7 @@ import "../App.css";
 
 const Info = () => {
   return (
-    <div>
+    <div id="infoComponent">
       <section>
         <Parallax speed={30}>
           <img src={Cloud1} className="Cloud1" />
