@@ -131,8 +131,11 @@ export class MapContainer extends React.Component {
     });
   };
 
-  deleteMarker = () => {
-    console.log("click");
+  deleteMarker = markerId => {
+    firebase
+      .database()
+      .ref("pins/" + markerId)
+      .remove();
   };
 
   render() {
@@ -217,7 +220,13 @@ export class MapContainer extends React.Component {
                     {marker.latitude}
                     {marker.longitude}
                   </ListGroup.Item>
-                  <Button onClick={this.deleteMarker}>Delete</Button>
+                  <Button
+                    onClick={() => {
+                      this.deleteMarker(marker.id);
+                    }}
+                  >
+                    Delete
+                  </Button>
                 </ListGroup>
               </Card>
             ))}
