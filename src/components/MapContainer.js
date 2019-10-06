@@ -1,21 +1,21 @@
 import React from "react";
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
 import firebase from "./Firebase.js";
-import { Button } from "react-bootstrap";
 import { isAbsolute } from "path";
+import { Form, Button, Card, ListGroup, Container } from "react-bootstrap";
 
 const mapStyles = {
   position: "absolute",
   top: "4%",
   marginLeft: "3%",
   marginRight: "3%",
-  height: "80%"
+  height: "70%"
 };
 
-const formStyles = {
-  position: "relative",
-  top: "80px"
-};
+// const formStyles = {
+//   position: "relative",
+//   top: "80px"
+// };
 
 export class MapContainer extends React.Component {
   constructor(props) {
@@ -68,13 +68,11 @@ export class MapContainer extends React.Component {
 
   //shows info window by passing in marker and place changing info window state to true
   onMarkerClick = (props, marker, e) => {
-    console.log({ props });
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
       showingInfoWindow: true
     });
-    console.log(this.state.markers);
   };
   // if the infowindow state is equal to true on close this changes it to false and marker is inactive
   onClose = props => {
@@ -90,9 +88,6 @@ export class MapContainer extends React.Component {
     //map through array looks at each index
     return this.state.markers.map((marker, index) => {
       //return each position from that ref point
-      console.log(
-        `Location: ${marker.placeName} Description: ${marker.placeInfo}`
-      );
       return (
         <Marker
           key={index}
@@ -136,13 +131,17 @@ export class MapContainer extends React.Component {
     });
   };
 
+  deleteMarker = () => {
+    console.log("click");
+  };
+
   render() {
-    console.log(this.state.markers);
     return (
       <div>
-        <section styles={formStyles} className="add-pin">
-          <form className="FormMove" onSubmit={this.handleSubmit}>
-            <input
+        <Container>
+          <Form onSubmit={this.handleSubmit}>
+            <Form.Control
+              size="md"
               type="text"
               name="name"
               placeholder="Name of Location"
@@ -150,7 +149,9 @@ export class MapContainer extends React.Component {
               value={this.state.name}
               required
             />
-            <input
+            <br />
+            <Form.Control
+              size="md"
               type="text"
               name="info"
               placeholder="Information on tick location"
@@ -158,7 +159,9 @@ export class MapContainer extends React.Component {
               value={this.state.info}
               required
             />
-            <input
+            <br />
+            <Form.Control
+              size="md"
               type="text"
               name="lats"
               placeholder="Enter lats"
@@ -166,7 +169,9 @@ export class MapContainer extends React.Component {
               value={this.state.lats}
               required
             />
-            <input
+            <br />
+            <Form.Control
+              size="md"
               type="text"
               name="longs"
               placeholder="Enter longs"
@@ -174,18 +179,15 @@ export class MapContainer extends React.Component {
               value={this.state.longs}
               required
             />
-            <button>Add Pin</button>
-          </form>
-        </section>
-
+            <Button type="submit">Add Pin</Button>
+          </Form>
+        </Container>
         <Map
           google={this.props.google}
           zoom={10}
           style={mapStyles}
           initialCenter={{ lat: 45.52, lng: -122.01 }}
           zoomControl={true}
-          onClick={e => this.handleClick(e)}
-          onDoubleClick={this.handleRightClick}
         >
           {this.displayMarkers()}
           <InfoWindow
@@ -203,15 +205,24 @@ export class MapContainer extends React.Component {
             </div>
           </InfoWindow>
         </Map>
-
-        <ul>
-          {this.state.markers.map(marker => (
-            <li>
-              {marker.name} {marker.placeInfo} {marker.latitude}
-              {marker.longitude}
-            </li>
-          ))}
-        </ul>
+        <Container>
+          <div className="UlPositioning">
+            {this.state.markers.map(marker => (
+              <Card key={marker.id} style={{ width: "25%" }}>
+                <ListGroup variant="flush">
+                  <ListGroup.Item>Name: {marker.placeName}</ListGroup.Item>
+                  <ListGroup.Item>Info: {marker.placeInfo}</ListGroup.Item>
+                  <ListGroup.Item>
+                    Location:
+                    {marker.latitude}
+                    {marker.longitude}
+                  </ListGroup.Item>
+                  <Button onClick={this.deleteMarker}>Delete</Button>
+                </ListGroup>
+              </Card>
+            ))}
+          </div>
+        </Container>
       </div>
     );
   }
