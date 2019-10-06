@@ -137,6 +137,7 @@ export class MapContainer extends React.Component {
   };
 
   render() {
+    console.log(this.state.markers);
     return (
       <div>
         <section styles={formStyles} className="add-pin">
@@ -176,6 +177,7 @@ export class MapContainer extends React.Component {
             <button>Add Pin</button>
           </form>
         </section>
+
         <Map
           google={this.props.google}
           zoom={10}
@@ -201,6 +203,15 @@ export class MapContainer extends React.Component {
             </div>
           </InfoWindow>
         </Map>
+
+        <ul>
+          {this.state.markers.map(marker => (
+            <li>
+              {marker.name} {marker.placeInfo} {marker.latitude}
+              {marker.longitude}
+            </li>
+          ))}
+        </ul>
       </div>
     );
   }
