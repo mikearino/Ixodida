@@ -48,8 +48,12 @@ User stories:
 4. As a user, I want to be able to edit a tick location
 5. As a user, I want to see photos of the area or ticks when I click on a marker (in a popup)
 6. As a user, I want the location of the map to generate where I currently am.
-
-![routes](/src/Routes.png)
+7. As a user, I want to know the environment ticks live.
+8. As a user, I want to know what kind of diseases they carry.
+9. As a user, I want to know what kind of ticks there are.
+10. As a user, I want to know how to protect myself.
+11. At a user, I want to know how to remove them.
+    ![routes](/src/Routes.png)
 
 ## Available Scripts
 

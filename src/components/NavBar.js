@@ -7,7 +7,9 @@ const NavBar = () => {
     <div className="Nav">
       <Navbar bg="dark" variant="dark">
         <img src={NavIcon} className="NavIcon" />
-        <Navbar.Brand href="#/">Ixodida</Navbar.Brand>
+        <Navbar.Brand href="#/">
+          <h1>Ixodida</h1>
+        </Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="#/">Home</Nav.Link>
           <Nav.Link href="#/tickmap">Tick Locations</Nav.Link>

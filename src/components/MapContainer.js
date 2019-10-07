@@ -2,7 +2,15 @@ import React from "react";
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
 import firebase from "./Firebase.js";
 import { isAbsolute } from "path";
-import { Form, Button, Card, ListGroup, Container } from "react-bootstrap";
+import {
+  Form,
+  Button,
+  Card,
+  ListGroup,
+  Container,
+  Row,
+  Col
+} from "react-bootstrap";
 
 const mapStyles = {
   position: "absolute",
@@ -142,7 +150,7 @@ export class MapContainer extends React.Component {
     return (
       <div>
         <Container>
-          <Form onSubmit={this.handleSubmit}>
+          <Form className="FormEntry" onSubmit={this.handleSubmit}>
             <Form.Control
               size="md"
               type="text"
@@ -182,6 +190,7 @@ export class MapContainer extends React.Component {
               value={this.state.longs}
               required
             />
+            <br></br>
             <Button type="submit">Add Pin</Button>
           </Form>
         </Container>
@@ -209,11 +218,13 @@ export class MapContainer extends React.Component {
           </InfoWindow>
         </Map>
         <Container>
+          {/* <Row> */}
+          {/* <Col md={12}> */}
           <div className="UlPositioning">
             {this.state.markers.map(marker => (
-              <Card key={marker.id} style={{ width: "25%" }}>
+              <Card key={marker.id} style={{ width: "100%" }}>
                 <ListGroup variant="flush">
-                  <ListGroup.Item>Name: {marker.placeName}</ListGroup.Item>
+                  <Card.Header>Name: {marker.placeName}</Card.Header>
                   <ListGroup.Item>Info: {marker.placeInfo}</ListGroup.Item>
                   <ListGroup.Item>
                     Location:
@@ -221,6 +232,7 @@ export class MapContainer extends React.Component {
                     {marker.longitude}
                   </ListGroup.Item>
                   <Button
+                    variant="danger"
                     onClick={() => {
                       this.deleteMarker(marker.id);
                     }}
@@ -231,6 +243,8 @@ export class MapContainer extends React.Component {
               </Card>
             ))}
           </div>
+          {/* </Col> */}
+          {/* </Row> */}
         </Container>
       </div>
     );

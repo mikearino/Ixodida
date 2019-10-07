@@ -26,15 +26,7 @@
   color: #09d3ac;
 }
 
-.NavIcon {
-  padding: 10px;
-}
-
-.NavStyle {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
+.BrandName {
   font-size: 40px;
 }
 
@@ -70,6 +62,34 @@
   z-index: -5;
 }
 
+.FormEntry {
+  padding: 40px;
+}
+
+.FormMove {
+  font-size: 30;
+  position: absolute;
+  top: 110%;
+  padding-left: 25%;
+  z-index: 2;
+}
+
+.NavIcon {
+  padding: 25px;
+}
+
+.Nav {
+  font-size: 30px;
+}
+
+.NavStyle {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  font-size: 40px;
+}
+
 .Tick {
   /* padding-top: 1000px; */
   z-index: -1;
@@ -99,15 +119,9 @@
   background-color: black !important;
 } */
 
-.FormMove {
-  font-size: 30;
-  position: absolute;
-  top: 110%;
-  padding-left: 25%;
-  z-index: 2;
-}
-
 .UlPositioning {
   position: absolute;
-  top: 115%;
+  left: 30%;
+  top: 130%;
+  padding: 30px;
 }

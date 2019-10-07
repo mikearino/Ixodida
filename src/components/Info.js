@@ -9,7 +9,8 @@ import Cloud4 from "./img/cloud4.jpg";
 import Tree from "./img/tree.png";
 import Grass from "./img/grass.png";
 import Tick from "./img/tick.png";
-
+import TickMap from "./img/tickMap.jpg";
+import TickInfo from "./img/tickInfo.jpeg";
 import "../App.css";
 
 const Info = () => {
@@ -33,6 +34,9 @@ const Info = () => {
         </Parallax>
         <Parallax speed={26.5}>
           <img src={Grass} className="Grass" />
+        </Parallax>
+        <Parallax speed={25.5}>
+          <img src={TickInfo} className="TickInfo" />
         </Parallax>
       </section>
 
