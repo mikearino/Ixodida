@@ -1,6 +1,6 @@
 #infoComponent {
   background: linear-gradient(#e66465, #9198e5);
-  height: 100%;
+  height: 120%;
 }
 
 .App {
@@ -97,11 +97,11 @@
 .IG1 {
   /* padding-top: 1000px; */
   z-index: -1;
-  float: left;
+  padding-left: 30%;
 }
 
 .IG2 {
-  padding-left: 500px;
+  padding-left: 20%;
   float: right;
 }
 
@@ -135,6 +135,45 @@
 /* .TickMap {
   background-color: black !important;
 } */
+.Tick1 {
+  float: left;
+  left: 25%;
+}
+
+.Tick2 {
+  float: right;
+  right: 25%;
+}
+
+.Tick3 {
+  float: left;
+  right: 25%;
+}
+
+.Tick4 {
+  float: right;
+
+}
+
+.Tick5 {
+  float: left;
+}
+
+.Tick6 {
+  float: right;
+}
+
+.Tick7 {
+  float: right;
+}
+
+.Tick8 {
+  float: left;
+}
+
+.Tick9 {
+  float: right;
+}
 
 .UlPositioning {
   position: absolute;
