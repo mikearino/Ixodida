@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardColumns } from "react-bootstrap";
+import { Container, Card, CardColumns } from "react-bootstrap";
 import Rellax from "rellax";
 import Parallax from "react-rellax";
 import Cloud1 from "./img/cloud1.png";
@@ -49,47 +49,7 @@ const Info = () => {
         <Parallax speed={26.5}>
           <img src={TickCard} className="TickCard" />
         </Parallax>
-        {/* </section>
-
-      <section> */}
-        {/* <Parallax speed={25}>
-          <img src={IG1} className="IG1" />
-        </Parallax>
-        <Parallax speed={20}>
-          <img src={IG2} className="IG2" />
-        </Parallax>
-        <Parallax speed={22}>
-          <img src={IG3} className="IG3" />
-        </Parallax>
-        <Parallax speed={21}>
-          <img src={IG4} className="IG4" />
-        </Parallax>
-        <Parallax speed={20}>
-          <img src={IG5} className="IG5" />
-        </Parallax>
-        <Parallax speed={19}>
-          <img src={IG6} className="IG6" />
-        </Parallax>
-        <Parallax speed={18}>
-          <img src={IG7} className="IG7" />
-        </Parallax>
-        <Parallax speed={17}>
-          <img src={IG8} className="IG8" />
-        </Parallax>
-        <Parallax speed={16}>
-          <img src={IG9} className="IG9" />
-        </Parallax> */}
       </section>
-
-
-
-
-
-
-
-
-
-
 
       <section>
         <Parallax speed={59}>
@@ -122,9 +82,113 @@ const Info = () => {
         <Parallax speed={56}>
           <img src={NavIcon} className="Tick10" />
         </Parallax>
+        <Parallax speed={59}>
+          <img src={NavIcon} className="Tick11" />
+        </Parallax>
+        <Parallax speed={63}>
+          <img src={NavIcon} className="Tick12" />
+        </Parallax>
+        <Parallax speed={66}>
+          <img src={NavIcon} className="Tick13" />
+        </Parallax>
+        <Parallax speed={68}>
+          <img src={NavIcon} className="Tick14" />
+        </Parallax>
+        <Parallax speed={73}>
+          <img src={NavIcon} className="Tick15" />
+        </Parallax>
+        <Parallax speed={71}>
+          <img src={NavIcon} className="Tick16" />
+        </Parallax>
+        <Parallax speed={69}>
+          <img src={NavIcon} className="Tick17" />
+        </Parallax>
       </section>
-    </div>
+      <section>
+        <Parallax speed={70}>
+          <img src={NavIcon} className="Tick18" />
+        </Parallax>
+        <Parallax speed={64}>
+          <img src={NavIcon} className="Tick9" />
+        </Parallax>
+        <Parallax speed={63}>
+          <img src={NavIcon} className="Tick20" />
+        </Parallax>
+        <Parallax speed={20}>
+          <img src={NavIcon} className="Tick21" />
+        </Parallax>
+        <Parallax speed={28}>
+          <img src={NavIcon} className="Tick22" />
+        </Parallax>
+        <Parallax speed={24}>
+          <img src={NavIcon} className="Tick23" />
+        </Parallax>
+        <Parallax speed={27}>
+          <img src={NavIcon} className="Tick24" />
+        </Parallax>
+        <Parallax speed={30}>
+          <img src={NavIcon} className="Tick25" />
+        </Parallax>
+        <Parallax speed={31}>
+          <img src={NavIcon} className="Tick26" />
+        </Parallax>
+        <Parallax speed={41.5}>
+          <img src={NavIcon} className="Tick27" />
+        </Parallax>
+        <Parallax speed={29.5}>
+          <img src={NavIcon} className="Tick28" />
+        </Parallax>
+        <Parallax speed={31.5}>
+          <img src={NavIcon} className="Tick29" />
+        </Parallax>
+        <Parallax speed={39.5}>
+          <img src={NavIcon} className="Tick30" />
+        </Parallax>
+        <Parallax speed={20.5}>
+          <img src={NavIcon} className="Tick31" />
+        </Parallax>
+        <Parallax speed={33}>
+          <img src={NavIcon} className="Tick32" />
+        </Parallax>
+        <Parallax speed={34}>
+          <img src={NavIcon} className="Tick33" />
+        </Parallax>
+        <Parallax speed={36}>
+          <img src={NavIcon} className="Tick34" />
+        </Parallax>
+        <Parallax speed={35}>
+          <img src={NavIcon} className="Tick35" />
+        </Parallax>
+        <Parallax speed={38}>
+          <img src={NavIcon} className="Tick36" />
+        </Parallax>
+        <Parallax speed={37}>
+          <img src={NavIcon} className="Tick37" />
+        </Parallax>
+        <Parallax speed={40}>
+          <img src={NavIcon} className="Tick38" />
+        </Parallax>
+        <Parallax speed={38.5}>
+          <img src={NavIcon} className="Tick39" />
+        </Parallax>
+        <Parallax speed={33.8}>
+          <img src={NavIcon} className="Tick40" />
+        </Parallax>
+
+      </section>
+    </div >
   );
 };
 
 export default Info;
+
+
+
+
+
+
+
+
+
+
+

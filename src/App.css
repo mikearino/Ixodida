@@ -1,6 +1,16 @@
+html {
+  /* overflow: hidden; */
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  /* overflow: auto; */
+}
+
 #infoComponent {
   background: linear-gradient(#e66465, #9198e5);
-  height: 120%;
+  height: 50%;
 }
 
 .App {
@@ -141,8 +151,8 @@
 }
 
 .Tick2 {
-  float: right;
-  right: 25%;
+  /* float: right;
+  right: 25%; */
 }
 
 .Tick3 {
@@ -174,6 +184,131 @@
 .Tick9 {
   float: right;
 }
+
+.Tick10 {
+  float: left;
+}
+
+.Tick11 {
+  float: right;
+}
+
+.Tick12 {
+  float: left;
+}
+
+.Tick13 {
+  float: right;
+}
+
+.Tick14 {
+  float: left;
+}
+
+.Tick15 {
+  float: right;
+}
+
+.Tick16 {
+  float: left;
+}
+
+.Tick17 {
+  float: right;
+}
+
+.Tick18 {
+  float: left;
+}
+
+.Tick19 {
+  float: right;
+}
+
+.Tick20 {
+  float: left;
+}
+
+.Tick21 {
+  float: left;
+}
+
+.Tick22 {
+  float: right;
+}
+
+.Tick23 {
+  float: left;
+}
+
+.Tick24 {
+  float: right;
+}
+
+.Tick25 {
+  float: left;
+}
+
+.Tick26 {
+  float: right;
+}
+
+.Tick27 {
+  float: left;
+}
+
+.Tick28 {
+  float: right;
+}
+
+.Tick29 {
+  float: left;
+}
+
+.Tick30 {
+  float: right;
+}
+
+.Tick31 {
+  float: left;
+}
+
+.Tick32 {
+  float: right;
+}
+
+.Tick33 {
+  float: left;
+}
+
+.Tick34 {
+  float: right;
+}
+
+.Tick35 {
+  float: left;
+}
+
+.Tick36 {
+  float: right;
+}
+
+.Tick37 {
+  /* float: left; */
+}
+
+.Tick38 {
+  /* float: right; */
+}
+
+.Tick39 {
+  /* float: left; */
+}
+
+.Tick40 {
+  /* float: right; */
+}
+
 
 .UlPositioning {
   position: absolute;
