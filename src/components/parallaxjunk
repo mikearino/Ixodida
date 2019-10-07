@@ -1,59 +1,11 @@
-import React from "react";
-import { Container, Card, CardColumns } from "react-bootstrap";
-import Rellax from "rellax";
-import Parallax from "react-rellax";
-import Cloud1 from "./img/cloud1.png";
-import Cloud2 from "./img/cloud2.png";
-import Cloud3 from "./img/cloud3.jpg";
-import Cloud4 from "./img/cloud4.jpg";
-import Tree from "./img/tree.png";
-import Grass from "./img/grass.png";
-import Tick from "./img/tick.png";
-import TickMap from "./img/tickMap.jpg";
-import TickInfo from "./img/tickInfo.jpeg";
-import Sun from "./img/sun.png"
-// import TickCard from "./img/tickInfo.jpeg"
-import NavIcon from "./img/navIcon.png"
-import "../App.css";
-
-const Info = () => {
-  return (
-    <div id="infoComponent">
-      <section>
-        <Parallax speed={20.5}>
-          <img src={Sun} className="Sun" />
-        </Parallax>
-        <Parallax speed={30}>
-          <img src={Cloud1} className="Cloud1" />
-        </Parallax>
-        <Parallax speed={10}>
-          <img src={Cloud2} className="Cloud2" />
-        </Parallax>
-        <Parallax speed={9}>
-          <img src={Cloud3} className="Cloud3" />
-        </Parallax>
-        <Parallax speed={23}>
-          <img src={Cloud4} className="Cloud4" />
-        </Parallax>
-        <Parallax speed={25.5}>
-          <img src={TickInfo} className="TickInfo" />
-        </Parallax>
-        <Parallax speed={32.5}>
-          <img src={Grass} className="Grass" />
-        </Parallax>
-        <Parallax speed={28.5}>
-          <img src={Tree} className="Tree" />
-        </Parallax>
-      </section>
-
-      <section>
-        <Parallax speed={46}>
+ {/* <section>
+        <Parallax speed={59}>
           <img src={NavIcon} className="Tick1" />
         </Parallax>
-        <Parallax speed={53}>
+        <Parallax speed={63}>
           <img src={NavIcon} className="Tick2" />
         </Parallax>
-        <Parallax speed={44}>
+        <Parallax speed={66}>
           <img src={NavIcon} className="Tick3" />
         </Parallax>
         <Parallax speed={40}>
@@ -62,22 +14,21 @@ const Info = () => {
         <Parallax speed={44}>
           <img src={NavIcon} className="Tick5" />
         </Parallax>
-        <Parallax speed={30}>
+        <Parallax speed={39}>
           <img src={NavIcon} className="Tick6" />
         </Parallax>
-        <Parallax speed={36}>
+        <Parallax speed={46}>
           <img src={NavIcon} className="Tick7" />
         </Parallax>
         <Parallax speed={47}>
           <img src={NavIcon} className="Tick8" />
         </Parallax>
-        <Parallax speed={32}>
+        <Parallax speed={52}>
           <img src={NavIcon} className="Tick9" />
         </Parallax>
-        <Parallax speed={28}>
+        <Parallax speed={56}>
           <img src={NavIcon} className="Tick10" />
         </Parallax>
-        {/*
         <Parallax speed={59}>
           <img src={NavIcon} className="Tick11" />
         </Parallax>
@@ -169,21 +120,6 @@ const Info = () => {
         </Parallax>
         <Parallax speed={33.8}>
           <img src={NavIcon} className="Tick40" />
-        </Parallax>  */}
-      </section>
-    </div >
-  );
-};
+        </Parallax> 
 
-export default Info;
-
-
-
-
-
-
-
-
-
-
-
+      </section> */}

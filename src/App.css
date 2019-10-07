@@ -1,17 +1,13 @@
 html {
-  /* overflow: hidden; */
   height: 100%;
 }
 
 body {
-  height: 100%;
   /* overflow: auto; */
+   background: linear-gradient(#e66465, #9198e5);
+  height: 350%;
 }
 
-#infoComponent {
-  background: linear-gradient(#e66465, #9198e5);
-  height: 50%;
-}
 
 .App {
   text-align: center;
@@ -41,35 +37,27 @@ body {
 }
 
 .Cloud1 {
-  padding-top: 200px;
-  float: right;
-  max-width: 80%;
-  height: auto;
-  mix-blend-mode: multiply;
+  position: absolute;
+  top: 1100px;
+  left: 1400px;
 }
 
 .Cloud2 {
-  padding-top: 500px;
-  float: left;
-  max-width: 100%;
-  height: auto;
-  mix-blend-mode: multiply;
+  position: absolute;
+  top: 10px;
+  left: 100px;
 }
 
 .Cloud3 {
-  /* float: right; */
-  max-width: 100%;
-  height: auto;
-  mix-blend-mode: multiply;
+  position: absolute;
+  top: 1000px;
+  left: 100px;
 }
 
 .Cloud4 {
-  /* float: left; */
-  padding-top: 500px;
-  max-width: 100%;
-  height: auto;
-  mix-blend-mode: multiply;
-  z-index: -5;
+  position: absolute;
+   top: 300px;
+  left: 800px;
 }
 
 .FormEntry {
@@ -85,7 +73,10 @@ body {
 }
 
 .Grass{
-  width: 100%
+  position: absolute;
+  top: 4500px;
+  right: .1px;
+  width: 100%;
 }
 
 .NavIcon {
@@ -104,211 +95,295 @@ body {
   font-size: 40px;
 }
 
-.IG1 {
-  /* padding-top: 1000px; */
-  z-index: -1;
-  padding-left: 30%;
+.Sun {
+  position: absolute;
+  top: 400px;
+  left: 1800px;
 }
 
-.IG2 {
-  padding-left: 20%;
-  float: right;
-}
-
-.IG3 {
-  float: left;
-}
-
-.IG4 {
-  float: right;
-}
-
-.IG5 {
-  float: left;
-}
-
-.IG6 {
-  float: right;
-}
-
-.IG7 {
-  float: left;
-}
-
-.IG8 {
-  float: right;
-}
-
-.IG9 {
-  float: left;
-}
-/* .TickMap {
-  background-color: black !important;
-} */
 .Tick1 {
+  position: absolute;
   float: left;
+  top: 8000px;
   left: 25%;
 }
 
 .Tick2 {
-  /* float: right;
-  right: 25%; */
+  position: absolute;
+  float: right;
+  top: 9000px;
+  right: 51%; 
 }
 
-.Tick3 {
+ .Tick3 {
+   position: absolute;
   float: left;
-  right: 25%;
+  top: 7000px;
+  right: 45%;
 }
 
 .Tick4 {
-  float: right;
-
+  position: absolute;
+  top: 9000px;
+  left: 35%;
 }
 
 .Tick5 {
-  float: left;
+  position: absolute;
+  top: 8000px;
+  right: 55%;
 }
 
 .Tick6 {
+  position: absolute;
   float: right;
+  top: 6000px;
+  left: 55%;
 }
 
 .Tick7 {
-  float: right;
+  position: absolute;
+  top: 8000px;
+  right: 63%;
 }
 
 .Tick8 {
-  float: left;
+  position: absolute;
+  top: 9500px;
+  right: 45%;
 }
 
 .Tick9 {
-  float: right;
+  position: absolute;
+  top: 6700px;
+  right: 55%;
 }
 
 .Tick10 {
+  position: absolute;
   float: left;
+  top: 9000px;
+  left: 25%;
 }
 
 .Tick11 {
+  position: absolute;
   float: right;
+  top: 5000px;
+  right: 25%;
 }
 
 .Tick12 {
+  position: absolute;
   float: left;
+  top: 5300px;
+  left: 25%;
 }
 
 .Tick13 {
+  position: absolute;
   float: right;
+  top: 7000px;
+  right: 25%;
 }
 
 .Tick14 {
+  position: absolute;
   float: left;
+  top: 8000px;
+  left: 25%;
 }
 
 .Tick15 {
+  position: absolute;
   float: right;
+  top: 10000px;
+  left: 25%;
 }
 
 .Tick16 {
+  position: absolute;
   float: left;
+  top: 9020px;
+  right: 25%;
 }
 
 .Tick17 {
+  position: absolute;
   float: right;
+  top: 6800px;
+  left: 25%;
 }
 
 .Tick18 {
+  position: absolute;
   float: left;
+  top: 6000px;
+  right: 25%;
 }
 
 .Tick19 {
+  position: absolute;
   float: right;
+  top: 6200px;
 }
 
 .Tick20 {
+  position: absolute;
   float: left;
+  top: 6300px;
+  left: 25%;
 }
 
 .Tick21 {
+  position: absolute;
   float: left;
+  top: 6500px;
+  right: 25%;
 }
 
 .Tick22 {
+  position: absolute;
   float: right;
+  top: 6000px;
+  left: 25%;
 }
 
 .Tick23 {
+  position: absolute;
   float: left;
+  top: 5100px;
 }
 
 .Tick24 {
+  position: absolute;
   float: right;
+  top: 5000px;
+  left: 25%;
 }
 
 .Tick25 {
+  position: absolute;
   float: left;
+  top: 5000px;
+  right: 25%;
 }
 
 .Tick26 {
+  position: absolute;
   float: right;
+  top: 5200px;
+  left: 25%;
 }
 
 .Tick27 {
+  position: absolute;
   float: left;
+  top: 5800px;
+  right: 25%;
 }
 
 .Tick28 {
+  position: absolute;
   float: right;
+  top: 7300px;
+  left: 25%;
 }
 
 .Tick29 {
+  position: absolute;
   float: left;
+  top: 6000px;
+  right: 25%;
 }
 
 .Tick30 {
+  position: absolute;
   float: right;
+  top: 5400px;
+  left: 25%;
 }
 
 .Tick31 {
+  position: absolute;
   float: left;
+  top: 7000px;
+  left: 25%;
 }
 
 .Tick32 {
+  position: absolute;
   float: right;
+  top: 6034px;
+  right: 25%;
 }
 
 .Tick33 {
+  position: absolute;
   float: left;
+  top: 6560px;
+  left: 25%;
 }
 
 .Tick34 {
+  position: absolute;
   float: right;
+  top: 7000px;
+  right: 25%;
 }
 
 .Tick35 {
+  position: absolute;
   float: left;
+  top: 5300px;
+  left: 25%;
 }
 
 .Tick36 {
+  position: absolute;
   float: right;
+  top: 5000px;
+  right: 25%;
 }
 
 .Tick37 {
-  /* float: left; */
+  position: absolute;
+  float: left;
+  top: 5200px;
+  left: 25%;
 }
 
 .Tick38 {
-  /* float: right; */
+  position: absolute;
+  float: left;
+  top: 5200px;
+  right: 25%;
 }
 
 .Tick39 {
-  /* float: left; */
+  position: absolute;
+  float: left;
+  top: 8200px;
 }
 
 .Tick40 {
-  /* float: right; */
+  position: absolute;
+  float: left;
+  top: 5200px;
+  right: 25%;
 }
 
+.TickInfo {
+  position: absolute;
+  top: 4450px;
+  left: 35%;
+}
+
+.Tree {
+  position: absolute;
+  left: 25%;
+  top: 2800px;
+}
 
 .UlPositioning {
   position: absolute;
