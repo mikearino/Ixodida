@@ -74,6 +74,10 @@
   z-index: 2;
 }
 
+.Grass{
+  width: 100%
+}
+
 .NavIcon {
   padding: 25px;
 }
@@ -90,31 +94,44 @@
   font-size: 40px;
 }
 
-.Tick {
+.IG1 {
   /* padding-top: 1000px; */
   z-index: -1;
+  float: left;
 }
 
-.Tick1 {
+.IG2 {
   padding-left: 500px;
-}
-
-.Tick2 {
   float: right;
 }
 
-.Tick3 {
+.IG3 {
+  float: left;
+}
+
+.IG4 {
   float: right;
 }
 
-.Tick4 {
+.IG5 {
+  float: left;
+}
+
+.IG6 {
   float: right;
 }
 
-.Tick5 {
+.IG7 {
+  float: left;
+}
+
+.IG8 {
   float: right;
 }
 
+.IG9 {
+  float: left;
+}
 /* .TickMap {
   background-color: black !important;
 } */
