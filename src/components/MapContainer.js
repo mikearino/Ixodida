@@ -14,16 +14,11 @@ import {
 
 const mapStyles = {
   position: "absolute",
-  top: "4%",
+  top: ".0005px",
   marginLeft: "3%",
   marginRight: "3%",
-  height: "70%"
+  height: "60%"
 };
-
-// const formStyles = {
-//   position: "relative",
-//   top: "80px"
-// };
 
 export class MapContainer extends React.Component {
   constructor(props) {
@@ -150,9 +145,18 @@ export class MapContainer extends React.Component {
     return (
       <div>
         <Container>
+          <br></br>
+          <br></br>
+          <h2>
+            <strong>
+              Add a tick location, click the map markers, or scroll down to see
+              the database.
+            </strong>
+          </h2>
           <Form className="FormEntry" onSubmit={this.handleSubmit}>
             <Form.Control
-              size="md"
+              style={{ backgroundColor: "lightgrey" }}
+              size="lg"
               type="text"
               name="name"
               placeholder="Name of Location"
@@ -162,7 +166,8 @@ export class MapContainer extends React.Component {
             />
             <br />
             <Form.Control
-              size="md"
+              style={{ backgroundColor: "lightgrey" }}
+              size="lg"
               type="text"
               name="info"
               placeholder="Information on tick location"
@@ -172,7 +177,8 @@ export class MapContainer extends React.Component {
             />
             <br />
             <Form.Control
-              size="md"
+              style={{ backgroundColor: "lightgrey" }}
+              size="lg"
               type="text"
               name="lats"
               placeholder="Enter lats"
@@ -182,7 +188,8 @@ export class MapContainer extends React.Component {
             />
             <br />
             <Form.Control
-              size="md"
+              style={{ backgroundColor: "lightgrey" }}
+              size="lg"
               type="text"
               name="longs"
               placeholder="Enter longs"
@@ -191,7 +198,13 @@ export class MapContainer extends React.Component {
               required
             />
             <br></br>
-            <Button type="submit">Add Pin</Button>
+            <Button
+              variant="outline-dark"
+              type="submit"
+              style={{ paddingTop: "15px" }}
+            >
+              <h5>Add Marker</h5>
+            </Button>
           </Form>
         </Container>
         <Map
@@ -222,22 +235,31 @@ export class MapContainer extends React.Component {
           {/* <Col md={12}> */}
           <div className="UlPositioning">
             {this.state.markers.map(marker => (
-              <Card key={marker.id} style={{ width: "100%" }}>
+              <Card bg="dark" key={marker.id} style={{ color: "white" }}>
                 <ListGroup variant="flush">
-                  <Card.Header>Name: {marker.placeName}</Card.Header>
-                  <ListGroup.Item>Info: {marker.placeInfo}</ListGroup.Item>
-                  <ListGroup.Item>
-                    Location:
-                    {marker.latitude}
-                    {marker.longitude}
+                  <Card.Header bg="dark">
+                    <h2>{marker.placeName}</h2>
+                  </Card.Header>
+                  <ListGroup.Item variant="dark">
+                    <h4>Info:</h4>
+                    <h5>{marker.placeInfo}</h5>
+                  </ListGroup.Item>
+                  <ListGroup.Item variant="dark">
+                    <h4>Location:</h4>
+                    <h5>
+                      {marker.latitude} {marker.longitude}
+                    </h5>
                   </ListGroup.Item>
                   <Button
-                    variant="danger"
+                    style={{ color: "black", paddingTop: "17px" }}
+                    variant="info"
                     onClick={() => {
                       this.deleteMarker(marker.id);
                     }}
                   >
-                    Delete
+                    <h5>
+                      <strong>Delete</strong>
+                    </h5>
                   </Button>
                 </ListGroup>
               </Card>
