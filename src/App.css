@@ -65,11 +65,28 @@ body {
   left: 800px;
 }
 
-.Dirt {
-  position: relative;
-  top: 2000px;
-  z-index: -1;
-  max-width: 100%;
+.Dirt1 {
+  position: absolute;
+  top: 6000px;
+  right: 400px;
+}
+
+.Dirt2 {
+  position: absolute;
+  top: 3300px;
+  left: 300px;
+}
+
+.Dirt3 {
+  position: absolute;
+  top: 5600px;
+  right: 1900px;
+}
+
+.Dirt4 {
+  position: absolute;
+  top: 3600px;
+  left: 1px;
 }
 
 .FormEntry {
@@ -143,7 +160,7 @@ body {
 .Tick5 {
   position: absolute;
   top: 8000px;
-  right: 55%;
+  right: 60%;
 }
 
 .Tick6 {
@@ -173,112 +190,97 @@ body {
 
 .Tick10 {
   position: absolute;
-  float: left;
   top: 9000px;
-  left: 25%;
+  left: 45%;
 }
 
 .Tick11 {
   position: absolute;
-  float: right;
-  top: 5000px;
-  right: 25%;
+  top: 15000px;
+  right: 55%;
 }
 
 .Tick12 {
   position: absolute;
-  float: left;
-  top: 5300px;
+  top: 12300px;
   left: 25%;
 }
 
 .Tick13 {
   position: absolute;
-  float: right;
-  top: 7000px;
-  right: 25%;
+  top: 17000px;
+  right: 45%;
 }
 
 .Tick14 {
   position: absolute;
-  float: left;
-  top: 8000px;
-  left: 25%;
+  top: 10000px;
+  left: 55%;
 }
 
 .Tick15 {
   position: absolute;
-  float: right;
   top: 10000px;
   left: 25%;
 }
 
 .Tick16 {
   position: absolute;
-  float: left;
-  top: 9020px;
-  right: 25%;
+  top: 19020px;
+  right: 55%;
 }
 
 .Tick17 {
   position: absolute;
-  float: right;
-  top: 6800px;
+  top: 13800px;
   left: 25%;
 }
 
 .Tick18 {
   position: absolute;
-  float: left;
-  top: 6000px;
+  top: 16000px;
   right: 25%;
 }
 
 .Tick19 {
   position: absolute;
-  float: right;
-  top: 6200px;
+  right: 17000px;
+  top: 16200px;
 }
 
 .Tick20 {
   position: absolute;
-  float: left;
-  top: 6300px;
+  top: 16300px;
   left: 25%;
 }
 
 .Tick21 {
   position: absolute;
-  float: left;
-  top: 6500px;
-  right: 25%;
+  top: 9000px;
+  right: 27%;
 }
 
 .Tick22 {
   position: absolute;
-  float: right;
-  top: 6000px;
+  top: 10000px;
   left: 25%;
 }
 
 .Tick23 {
   position: absolute;
-  float: left;
-  top: 5100px;
+  top: 10100px;
 }
 
 .Tick24 {
   position: absolute;
-  float: right;
-  top: 5000px;
-  left: 25%;
+  top: 11000px;
+  left: 40%;
 }
 
 .Tick25 {
   position: absolute;
-  float: left;
-  top: 5000px;
-  right: 25%;
+  top: 10009px;
+  right: 32%;
 }
 
 .Tick26 {
@@ -387,8 +389,8 @@ body {
 
 .TickInfo {
   position: absolute;
-  top: 4450px;
-  left: 35%;
+  top: 4470px;
+  left: 40%;
 }
 
 .Tree {
