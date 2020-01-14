@@ -1,16 +1,7 @@
 import React from "react";
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
 import firebase from "./Firebase.js";
-import { isAbsolute } from "path";
-import {
-  Form,
-  Button,
-  Card,
-  ListGroup,
-  Container,
-  Row,
-  Col
-} from "react-bootstrap";
+import { Form, Button, Card, ListGroup, Container } from "react-bootstrap";
 
 const mapStyles = {
   position: "absolute",
@@ -68,7 +59,6 @@ export class MapContainer extends React.Component {
       });
     });
   };
-
   //shows info window by passing in marker and place changing info window state to true
   onMarkerClick = (props, marker, e) => {
     this.setState({
@@ -86,7 +76,6 @@ export class MapContainer extends React.Component {
       });
     }
   };
-
   displayMarkers = () => {
     //map through array looks at each index
     return this.state.markers.map((marker, index) => {
@@ -231,8 +220,6 @@ export class MapContainer extends React.Component {
           </InfoWindow>
         </Map>
         <Container>
-          {/* <Row> */}
-          {/* <Col md={12}> */}
           <div className="UlPositioning">
             {this.state.markers.map(marker => (
               <Card bg="dark" key={marker.id} style={{ color: "white" }}>
@@ -265,8 +252,6 @@ export class MapContainer extends React.Component {
               </Card>
             ))}
           </div>
-          {/* </Col> */}
-          {/* </Row> */}
         </Container>
       </div>
     );

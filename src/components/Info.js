@@ -1,6 +1,4 @@
 import React from "react";
-import { Container, Card, CardColumns } from "react-bootstrap";
-import Rellax from "rellax";
 import Parallax from "react-rellax";
 import Cloud1 from "./img/cloud1.png";
 import Cloud2 from "./img/cloud2.png";
@@ -8,13 +6,9 @@ import Cloud3 from "./img/cloud3.jpg";
 import Cloud4 from "./img/cloud4.jpg";
 import Tree from "./img/tree.png";
 import Grass from "./img/grass.png";
-import Tick from "./img/tick.png";
-import TickMap from "./img/tickMap.jpg";
 import TickInfo from "./img/tickInfo.jpeg";
 import Sun from "./img/sun.png";
-// import TickCard from "./img/tickInfo.jpeg"
 import NavIcon from "./img/navIcon.png";
-import Dirt from "./img/dirt.png";
 import "../App.css";
 import Dirt1 from "./img/dirt1.png";
 import Dirt2 from "./img/dirt2.png";
@@ -141,52 +135,6 @@ const Info = () => {
         <Parallax speed={30}>
           <img src={NavIcon} className="Tick25" />
         </Parallax>
-        {/*
-        <Parallax speed={31}>
-        <img src={NavIcon} className="Tick26" />
-        </Parallax>
-        <Parallax speed={41.5}>
-        <img src={NavIcon} className="Tick27" />
-        </Parallax>
-        <Parallax speed={29.5}>
-        <img src={NavIcon} className="Tick28" />
-        </Parallax>
-        <Parallax speed={31.5}>
-        <img src={NavIcon} className="Tick29" />
-        </Parallax>
-        <Parallax speed={39.5}>
-        <img src={NavIcon} className="Tick30" />
-        </Parallax>
-        <Parallax speed={20.5}>
-        <img src={NavIcon} className="Tick31" />
-        </Parallax>
-        <Parallax speed={33}>
-        <img src={NavIcon} className="Tick32" />
-        </Parallax>
-        <Parallax speed={34}>
-        <img src={NavIcon} className="Tick33" />
-        </Parallax>
-        <Parallax speed={36}>
-        <img src={NavIcon} className="Tick34" />
-        </Parallax>
-        <Parallax speed={35}>
-        <img src={NavIcon} className="Tick35" />
-        </Parallax>
-        <Parallax speed={38}>
-        <img src={NavIcon} className="Tick36" />
-        </Parallax>
-        <Parallax speed={37}>
-        <img src={NavIcon} className="Tick37" />
-        </Parallax>
-        <Parallax speed={40}>
-        <img src={NavIcon} className="Tick38" />
-        </Parallax>
-        <Parallax speed={38.5}>
-        <img src={NavIcon} className="Tick39" />
-        </Parallax>
-        <Parallax speed={33.8}>
-        <img src={NavIcon} className="Tick40" />
-      </Parallax>  */}
       </section>
     </div>
   );
