@@ -6,9 +6,9 @@ const Foot = () => {
   return (
     <div className="InfoFoot">
       <Navbar bg="dark" variant="dark">
-        <Navbar.Text href="#/">
+        <a href="http://reactjs.org/">
           <img src={logo} alt="Logo" />
-        </Navbar.Text>
+        </a>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
