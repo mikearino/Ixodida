@@ -2,7 +2,7 @@
 
 https://capstone-2edc0.firebaseapp.com
 
-#### An app built in React that gives users information about ticks and their locations.
+#### An app built in React that gives users information about ticks and their locations. Deployed to Google Firebase.
 
 <p align="center">
   <img src="animated.gif">
