@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./img/reactfirebase.png";
 import { Navbar } from "react-bootstrap";
+import git from "./img/github.png";
 
 const Foot = () => {
   return (
@@ -11,9 +12,9 @@ const Foot = () => {
         </a>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
-            <a href="http://www.github.com/mikearino">Mike Lofgren</a>
-          </Navbar.Text>
+          <a class="Git" href="http://www.github.com/mikearino">
+            <img src={git} alt="Logo" />
+          </a>
         </Navbar.Collapse>
       </Navbar>
     </div>
