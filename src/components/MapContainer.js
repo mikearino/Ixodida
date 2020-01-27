@@ -2,7 +2,7 @@ import React from "react";
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
 import firebase from "./Firebase.js";
 import { Form, Button, Card, ListGroup, Container } from "react-bootstrap";
-import MapFoot from "./MapFoot";
+import Foot from "./Foot";
 
 const mapStyles = {
   position: "absolute",
@@ -254,6 +254,7 @@ export class MapContainer extends React.Component {
             ))}
           </div>
         </Container>
+        <Foot />
       </div>
     );
   }

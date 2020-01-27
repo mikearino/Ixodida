@@ -14,7 +14,7 @@ import Dirt1 from "./img/dirt1.png";
 import Dirt2 from "./img/dirt2.png";
 import Dirt3 from "./img/dirt3.png";
 import Dirt4 from "./img/dirt4.png";
-import InfoFoot from "./InfoFoot";
+import Foot from "./Foot";
 
 const Info = () => {
   return (
@@ -137,7 +137,7 @@ const Info = () => {
           <img src={NavIcon} className="Tick25" alt="tick" />
         </Parallax>
       </section>
-      <InfoFoot />
+      <Foot />
     </div>
   );
 };

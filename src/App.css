@@ -92,14 +92,8 @@ body {
 }
 
 .InfoFoot {
-  position: absolute;
-  top: 400%;
-  min-width: 100%;
-}
-
-.MapFoot {
-  position: absolute;
-  top: 380%;
+  position: fixed;
+  bottom: 0;
   min-width: 100%;
 }
 

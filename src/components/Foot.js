@@ -1,11 +1,14 @@
 import React from "react";
+import logo from "./img/reactfirebase.png";
 import { Navbar } from "react-bootstrap";
 
-const MapFoot = () => {
+const Foot = () => {
   return (
-    <div className="MapFoot">
+    <div className="InfoFoot">
       <Navbar bg="dark" variant="dark">
-        <Navbar.Text href="#/">Home</Navbar.Text>
+        <Navbar.Text href="#/">
+          <img src={logo} alt="Logo" />
+        </Navbar.Text>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
@@ -17,4 +20,4 @@ const MapFoot = () => {
   );
 };
 
-export default MapFoot;
+export default Foot;
