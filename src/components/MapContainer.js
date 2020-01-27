@@ -2,6 +2,8 @@ import React from "react";
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from "google-maps-react";
 import firebase from "./Firebase.js";
 import { Form, Button, Card, ListGroup, Container } from "react-bootstrap";
+import MapFoot from "./MapFoot";
+
 const mapStyles = {
   position: "absolute",
   top: ".0005px",
